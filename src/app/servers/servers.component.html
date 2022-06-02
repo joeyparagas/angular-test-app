@@ -1,3 +1,22 @@
 <h3>ServerS.componenet.html</h3>
 
+<input 
+	type="text"
+	class="form-control"
+	(input) = "onUpdateServerName($event)"
+	placeholder = "Input Name of Server"/>
+
+<label>{{ serverName }}</label><br>
+
+<button 
+	class="btn btn-primary" 
+	[disabled] = "!allowNewServer"
+	(click)="onCreateServer()">
+	Add Server
+</button>
+
+<p>	{{ serverCreationStatus }} </p>
+
+<hr>
+<app-server></app-server>
 <app-server></app-server>
